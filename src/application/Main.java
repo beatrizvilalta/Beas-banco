@@ -16,6 +16,32 @@ public class Main {
 
         List<BankAccount> bankAccountList = new ArrayList<>();
 
+        selectCase(bankAccountList, option);
+
+        sc.close();
+    }
+
+
+    public static int selectOptionInMenu() {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Choose an option: ");
+        System.out.println("1 - Register account");
+        System.out.println("2 - List of accounts");
+        System.out.println("3 - Account data");
+        System.out.println("4 - Balance inquiry");
+        System.out.println("5 - Deposit");
+        System.out.println("6 - Withdraw");
+        System.out.println("7 - Edit account");
+        System.out.println("8 - Remove account");
+        System.out.println("0 - Exit");
+
+        return sc.nextInt();
+    }
+
+    public static void selectCase(List<BankAccount> bankAccountList, int option){
+
         while (option != 0) {
             switch (option) {
                 case 1:
@@ -82,28 +108,8 @@ public class Main {
             }
         }
 
-
-        sc.close();
     }
 
-
-    public static int selectOptionInMenu() {
-
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Choose an option: ");
-        System.out.println("1 - Register account");
-        System.out.println("2 - List of accounts");
-        System.out.println("3 - Account data");
-        System.out.println("4 - Balance inquiry");
-        System.out.println("5 - Deposit");
-        System.out.println("6 - Withdraw");
-        System.out.println("7 - Edit account");
-        System.out.println("8 - Remove account");
-        System.out.println("0 - Exit");
-
-        return sc.nextInt();
-    }
 
     // Case 1 register account
     public static List<BankAccount> registerAccount(List<BankAccount> bankAccountList) {
