@@ -3,11 +3,11 @@ package application;
 import entities.BankAccount;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
 public class Main {
+
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -250,12 +250,17 @@ public class Main {
         System.out.println("Enter the account number you want to remove: ");
         int typedAccount = sc.nextInt();
 
-        for (BankAccount currentAccount : bankAccountList) {
-            if (typedAccount == (bankAccountList.indexOf(currentAccount) + 1)) {
-               bankAccountList.remove(currentAccount);
-               System.out.println("Account removed with success!");
-            }
-        }
+       if (bankAccountList.size() == 0) {
+           System.out.println("ERROR. There is no account to remove.");
+       } else{
+           for (BankAccount currentAccount : bankAccountList) {
+               if (typedAccount == bankAccountList.indexOf(currentAccount) + 1) {
+                   bankAccountList.remove(currentAccount);
+                   System.out.println("Account removed with success!");
+                   break;
+               }
+           }
+       }
     }
 }
 
