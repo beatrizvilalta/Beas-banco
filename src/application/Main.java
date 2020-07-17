@@ -42,13 +42,15 @@ public class Main {
 
     public static void selectCase(List<BankAccount> bankAccountList, int option){
 
-        while (option != 0) {
             switch (option) {
+                case 0:
+                    break;
                 case 1:
                     registerAccount(bankAccountList);
                     System.out.println();
                     option = selectOptionInMenu();
                     System.out.println();
+                    selectCase(bankAccountList, option);
                     break;
 
                 case 2:
@@ -56,6 +58,7 @@ public class Main {
                     System.out.println();
                     option = selectOptionInMenu();
                     System.out.println();
+                    selectCase(bankAccountList, option);
                     break;
 
                 case 3:
@@ -63,6 +66,7 @@ public class Main {
                     System.out.println();
                     option = selectOptionInMenu();
                     System.out.println();
+                    selectCase(bankAccountList, option);
                     break;
 
 
@@ -71,6 +75,7 @@ public class Main {
                     System.out.println();
                     option = selectOptionInMenu();
                     System.out.println();
+                    selectCase(bankAccountList, option);
                     break;
 
                 case 5:
@@ -78,6 +83,7 @@ public class Main {
                     System.out.println();
                     option = selectOptionInMenu();
                     System.out.println();
+                    selectCase(bankAccountList, option);
                     break;
 
                 case 6:
@@ -85,6 +91,7 @@ public class Main {
                     System.out.println();
                     option = selectOptionInMenu();
                     System.out.println();
+                    selectCase(bankAccountList, option);
                     break;
 
                 case 7:
@@ -92,6 +99,7 @@ public class Main {
                     System.out.println();
                     option = selectOptionInMenu();
                     System.out.println();
+                    selectCase(bankAccountList, option);
                     break;
 
                 case 8:
@@ -99,14 +107,15 @@ public class Main {
                     System.out.println();
                     option = selectOptionInMenu();
                     System.out.println();
+                    selectCase(bankAccountList, option);
                     break;
 
                 default:
                     System.out.println("ERROR: Code not identified. Try again: ");
                     option = selectOptionInMenu();
                     System.out.println();
+                    selectCase(bankAccountList, option);
             }
-        }
 
     }
 
